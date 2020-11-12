@@ -104,7 +104,7 @@ int GetRandom()
 
 void DisplayResults(vector<Fibonacci>* fibonaccis, int time)
 {
-    cout << "\nProcess\t" << "fib(n)\t" << "Result\t" << "Time(ms)\t" << endl;
+    cout << "\n#\t" << "fib(n)\t" << "Result\t" << "Time(ms)\t" << endl;
     for (Fibonacci f : *fibonaccis)
     {
         cout << f.GetIndex() << "\t" << f.GetNumber() << "\t" << f.GetResult() << "\t" << f.GetTime() << endl;
@@ -183,10 +183,9 @@ int main(int argc, char* argv[])
     DisplayResults(fibonaccis, threading);
 
 	// Display time results
-    cout << "\nResult Type\tTime(ms)" << endl;
-    cout << "Singlethread\t" << nothreading << "(ms)" << endl;
-    cout << "Multithread\t" << threading << "(ms)" << endl;
-    cout << "Difference\t" << nothreading - threading << "(ms)" << endl;
+    cout << "Singlethreaded:" << nothreading << "(ms)" << endl;
+    cout << "Multithreaded:" << threading << "(ms)" << endl;
+    cout << "Difference:" << nothreading - threading << "(ms)" << endl;
 
     return 0;
 }
