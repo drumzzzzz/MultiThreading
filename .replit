@@ -1,0 +1,1 @@
+run="clang++-7 -pthread -std=c++17 ./MultiThreading/main.cpp -o ./MultiThreading/MultiThreading.exe && ./MultiThreading/MultiThreading.exe 10 10000"
